@@ -12,30 +12,24 @@
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/owlCarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owlCarousel/owl.theme.default.min.css">
-    <!--    SCRIPTS   -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script
-  src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script src="js/owlCarousel/owl.carousel.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="css/vendor/magnific-popup.css">
+
 
 </head>
 
 <body>
+    <!-- Header
+   ================================================== -->
     <header>
 
-        <nav>
+        <nav id="nav-wrap">
             <div class="container">
-
-                <div class="navbar">
-                    <div>
-                        <a class="link" href="#">home</a>
+                <div class="navbar" id="nav">
+                    <div class="current">
+                        <a class="link smoothscroll" href="#home">home</a>
                     </div>
                     <div>
-                        <a class="link" href="#">photoapp</a>
+                        <a class="link smoothscroll" href="#photoapp">photoapp</a>
                     </div>
                     <div id="logo">
                         <a href="#">
@@ -43,15 +37,16 @@
                         </a>
                     </div>
                     <div>
-                        <a class="link" href="#">design</a>
+                        <a class="link smoothscroll" href="#design">design</a>
                     </div>
                     <div>
-                        <a class="link" href="#">download</a>
+                        <a class="link smoothscroll" href="#download">download</a>
                     </div>
                 </div>
             </div>
-
         </nav>
+        <!-- Jumbotron
+   ================================================== -->
         <div class="jumbotron hero-bg">
             <div class="clippy-wrap">
                 <div class="star-container" id="star-cont">
@@ -59,17 +54,21 @@
                 </div>
             </div>
             <div class="container">
-
                 <h1>Your Life, A photo</h1>
                 <p>print your life in a simple photo</p>
                 <a class="btn btn-primary btn-lg" href="#" role="button">Get started</a>
-
             </div>
-
+            <div class="social">
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://flickr.com" target="_blank"/><i class="fab fa-flickr"></i></a>
+                <a href="https://dribbble.com/" target="_blank"> <i class="fab fa-dribbble"></i></a>
+            </div>
         </div>
-
     </header>
+
     <main>
+        <!-- 1. Photo App section
+   ================================================== -->
         <section id="photoapp">
             <div class="container">
                 <div class="row">
@@ -78,7 +77,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                             ut aliquip ex ea commodo consequat.</p>
-                        <a href="#" type="button" class="btn btn-primary btn-lg">Get started</a>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Get started</a>
                     </div>
                     <div class="col-md-6 hand-wrapper">
                         <img src="images/hand-iphone.png" alt="hand with iPhone 5s">
@@ -86,93 +85,207 @@
                 </div>
             </div>
         </section>
+
+        <!-- 3. Design section
+   ================================================== -->
         <section id="design">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 iphone-wrapper">
                         <img src="images/iphone-5c.png" alt="iPhone 5c">
                     </div>
+
                     <div class="col-md-6 inner-text-wrapper">
-                        <div class="slider-container">
-                            <div class="slider-wrapper">
-                                <div class="inner-wrapper">
-                                    <div class="slide" style="background: #00a8ff;">
-                                        <h3>DESIGN</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed unde delectus at obcaecati,
-                                            minus enim neque quasi explicabo? Laboriosam error vero, commodi provident recusandae
-                                            cumque pariatur rem. Veniam, commodi assumenda.</p>
-                                    </div>
-                                    <div class="slide" style="background: #e84118;">
-                                        <h3>DESIGN</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed unde delectus at obcaecati,
-                                            minus enim neque quasi explicabo? Laboriosam error vero, commodi provident recusandae
-                                            cumque pariatur rem. Veniam, commodi assumenda.</p>
-                                    </div>
-                                    <div class="slide" style="background: #7f8fa6;">
-                                        <h3>DESIGN</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed unde delectus at obcaecati,
-                                            minus enim neque quasi explicabo? Laboriosam error vero, commodi provident recusandae
-                                            cumque pariatur rem. Veniam, commodi assumenda.</p>
-                                    </div>
-                                    <div class="slide" style="background: #487eb0;">
-                                        <h3>DESIGN</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed unde delectus at obcaecati,
-                                            minus enim neque quasi explicabo? Laboriosam error vero, commodi provident recusandae
-                                            cumque pariatur rem. Veniam, commodi assumenda.</p>
-                                    </div>
-                                    <div class="slide" style="background: #fbc531;">
-                                        <h3>DESIGN</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed unde delectus at obcaecati,
-                                            minus enim neque quasi explicabo? Laboriosam error vero, commodi provident recusandae
-                                            cumque pariatur rem. Veniam, commodi assumenda.</p>
-                                    </div>
-                                </div>
-                                <ul class="slider-dots">
-                                </ul>
-                            </div>
-                            <div class="button prev"></div>
-                            <div class="button next"></div>
-                        </div>
+
+                        <ul class="owl-one owl-carousel owl-theme">
+                            <li class="item">
+                                <blockquote>
+                                    <h3>DESIGN</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed unde delectus at obcaecati,
+                                        minus enim neque quasi explicabo? Laboriosam error vero, commodi provident recusandae
+                                        cumque pariatur rem. Veniam, commodi assumenda.</p>
+                                </blockquote>
+                            </li>
+                            <!-- slide ends -->
+                            <li class="item">
+                                <blockquote>
+                                    <h3>WEB DEV</h3>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, dolor doloribus enim
+                                        numquam distinctio quis. dolor sit amet consectetur adipisicing elit. Earum, dolor
+                                        doloribus enim numquam distinctio quis.</p>
+                                </blockquote>
+                            </li>
+                            <!-- slide ends -->
+                            <li class="item">
+                                <blockquote>
+                                    <h3>RWD</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eaque itaque at explicabo
+                                        molestias ad, cum quasi. placeat consequuntur obcaecati ad facere sint quisquam!</p>
+                                </blockquote>
+                            </li>
+                            <!-- slide ends -->
+                            <li class="item">
+                                <blockquote>
+                                    <h3>UI</h3>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias excepturi odio, delectus
+                                        tenetur placeat consequuntur obcaecati ad facere sint quisquam! Lorem ipsum dolor
+                                        sit amet consectetur, adipisicing elit. Perferendis facilis quo ipsa ea?</p>
+                                </blockquote>
+                            </li>
+                            <!-- slide ends -->
+                            <li class="item">
+                                <blockquote>
+                                    <h3>UX</h3>
+                                    <p>Samet, consectetur adipisicing elit. Sed unde delectus at obcaecati, minus enim neque
+                                        quasi explicabo? Laboriosam error vero, commodi provident recusandae cumque pariatur
+                                        rem. Veniam, commodi assumenda.</p>
+                                </blockquote>
+                            </li>
+                            <!-- slide ends -->
+                        </ul>
+
+
+
+
+
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- Community Section
+   ================================================== -->
         <section id="community">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 inner-text-wrapper text-center">
-                        <img src="images/Livello 4@1X.png" alt="">
+                    <div class="col-md-3 inner-text-wrapper text-center description">
+                        <img src="images/Livello 4@1X.png" alt="camera logo">
                         <h4>our community</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, explicabo.</p>
+                        <p>Lorem ipsum dolor sit amet Consectetur, explicabo.</p>
                     </div>
-                    <div class="col-md-9  inner-text-wrapper">
-                        <div class="owl-carousel owl-theme">
+                    <div class="col-md-8 offset-md-1 inner-text-wrapper">
+                        <div class="owl-two owl-carousel owl-theme">
                             <div class="item">
-                                
-                                <img src="https://images.pexels.com/photos/911/time-watch-hands-of-a-clock-clock-pointers.jpg?h=350&auto=compress&cs=tinysrgb" alt="">
+                                <img src="https://images.pexels.com/photos/911/time-watch-hands-of-a-clock-clock-pointers.jpg?h=350&auto=compress&cs=tinysrgb"
+                                    alt="">
                             </div>
                             <div class="item">
-                                
                                 <img src="https://images.pexels.com/photos/163695/auto-vw-vw-bus-vehicle-163695.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
                             </div>
                             <div class="item">
-                                
                                 <img src="https://images.pexels.com/photos/167712/pexels-photo-167712.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
                             </div>
                             <div class="item">
-                                
                                 <img src="https://images.pexels.com/photos/33355/capsule-pill-health-medicine.jpg?h=350&auto=compress&cs=tinysrgb" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://unsplash.it/525/350" alt="something">
+                            </div>
+                            <div class="item">
+                                <img src="https://unsplash.it/526/349" alt="something">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </section>
-        <section>
 
+        <section id="subscribe">
+            <div class="container inner-text-wrapper">
+                <form name="contactForm" id="contactForm" action="" method="post">
+                    <h5>Subscribe to our community</h5>
+                    <div class="input-group mb-3">
+                        <input id="contactEmail" name="contactEmail" type="email" class="form-control" placeholder="your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary submit" type="submit" >
+                                <i class="fas fa-check"></i>
+                                
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!-- contact-warning -->
+               <div id="message-warning"><i class="fab fa-times"></i><br></div>
+               <!-- contact-success -->
+				   <div id="message-success">
+                  <i class="fab fa-check"></i>success<br>
+				   </div>
+
+            </div>
+        </section>
+        <section id="download">
+            <div class="container">
+                <div class="inner-text-wrapper">
+                <h4>Download it</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex non incidunt animi dignissimos. Inventore cum
+                    aspernatur nemo, rerum vitae quisquam delectus natus reprehenderit aliquid deserunt minima adipisci vero
+                    commodi quaerat ullam est quo ad exercitationem?</p>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-4" role="group" aria-label="First group">
+                            <a role="button" class="btn btn-secondary">App Store</a>
+                            <a role="button" class="btn btn-primary"><i class="fab fa-apple"></i></a>
+                            
+                          </div>
+                          <div class="btn-group mr-2" role="group" aria-label="First group">
+                                <a role="button" class="btn btn-secondary">Play Store</a>
+                                <a role="button" class="btn btn-primary" disabled><i class="fab fa-google-play"></i></a>
+                                
+                              </div>
+                            </div>
+                </div>
+                
+            </div>
         </section>
     </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <ul class="terms">
+                        <li><a href="#modal-01">credits</a></li>
+                        <li><a href="#modal-02">privacy</a></li>
+                        <li><a href="#modal-03">our terms</a></li>
+                    </ul>
+                    <p>Copyright by photosite - all rights reserved</p>
+                </div>
+                <div class="col-md-1 ml-auto">
+                    <img src="./images/Livello 4@1X.png" alt="logo">
+                </div>
+            </div>
+        </div>
+        <!-- MODAL POPUPS -->
+        <div id="modal-01" class="popup-modal mfp-hide">
+                <div class="description-box">
+                    <h4>Credits</h4>
+                    <p>Site prepared by Patryk Kurzeja with HTML5, CSS3, Bootsrap and jQuery <br/>
+                    Added funcionality with Magnific-popups, Owl Carousel 2, Waypoints.
+                    </p>
+                 <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+                </div>
+  
+              <div class="link-box">
+                   <a class="popup-modal-dismiss">Close</a>
+              </div>
+  
+            </div><!-- modal-01 End -->
+
+            <div id="includePrivacy"></div>
+            <!-- modal-02 End -->
+            <div id="includeTerms"></div>
+            <!-- modal-03 End -->
+    </footer>
+    <!--    SCRIPTS   -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/waypoints.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/magnific-popup.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
