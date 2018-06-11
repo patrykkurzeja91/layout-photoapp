@@ -7,7 +7,7 @@ $siteOwnersEmail = 'patrick.kurzeja@gmail.com';
 if($_POST) {
 
    $email = trim(stripslashes($_POST['contactEmail']));
-   
+   $subject = 'subsribe list';
    
 	// Check Email
 	if (!preg_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
@@ -34,7 +34,7 @@ if($_POST) {
    if (!$error) {
 
       ini_set("sendmail_from", $siteOwnersEmail); // for windows server
-      $mail = mail($siteOwnersEmail, $message, $headers);
+      $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
 		if ($mail) { echo "OK"; }
       else { echo "Something went wrong. Please try again."; }

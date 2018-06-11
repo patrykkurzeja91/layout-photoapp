@@ -129,6 +129,7 @@ $('.smoothscroll').on('click',function (e) {
       window.location.hash = target;
   });
 });
+  
   /*----------------------------------------------------*/
   /*	Make sure that #header-background-image height is
   /* equal to the browser height.
@@ -137,7 +138,7 @@ $('.smoothscroll').on('click',function (e) {
   $('header').css({
     'height': $(window).height()
   });
-  $(window).on('resize', function () {
+  $(window).on('resize', () => {
 
     $('header').css({
       'height': $(window).height()
@@ -151,7 +152,7 @@ $('.smoothscroll').on('click',function (e) {
 /*subscribe button
 ------------------------------------------------------*/
 
-$('#subscribe button.submit').click(function() {
+$('#subscribe button.submit').click(() => {
 
   $('#image-loader').fadeIn();
 
@@ -185,4 +186,26 @@ $('#subscribe button.submit').click(function() {
   });
   return false;
 });
+var iphone = $('.iphone-wrapper .iphone'),
+    smiley = $('.iphone-wrapper .smiley');
+if ($(window).outerWidth() < 768 ) {
+iphone.mouseenter(
+  function () {
+    iphone.stop().animate({bottom: '-800px'},500);
+    setTimeout(() => {
+      smiley.stop().animate({bottom: '-630px'},1200)
+    }, 250);
+    }
+);
+iphone.mouseleave(
+  function () {
+    iphone.stop().animate({bottom: '-1000px'},500);
+    smiley.stop().animate({bottom: '-800px'},500);
+    }
+);
+}
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+  
 });

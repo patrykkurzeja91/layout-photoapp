@@ -1,0 +1,181 @@
+$accent: #16a085;
+$accent-light:#1abc9c;
+$light-grey:#f5f6f7;
+$c-text-bold:#373737;
+$c-text-regular:#4b4b4b;
+$white: #fff;
+@media (max-width: 767px) {
+    // NAVBAR QUERIES
+    nav {
+        z-index: 3;
+        position: relative;
+        .container {
+            position: fixed;
+        }
+        .navbar-toggler {
+            display: none;
+        }
+        .navbar-toggler-label {
+            position: fixed;
+            top: 0;
+            right: 0;
+            color: $white;
+            display: block;
+            z-index: 3;
+            background: $accent-light;
+            width: 200px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span,
+            span::before,
+            span::after {
+                display: block;
+                background: $white;
+                height: 2px;
+                width: 2em;
+                border-radius: 2px;
+                position: relative;
+            }
+            span::before,
+            span::after {
+                content: '';
+                position: absolute;
+            }
+            span::before {
+                bottom: 7px;
+            }
+            span::after {
+                top: 7px;
+            }
+        }
+        .navbar {
+            display: block;
+            transform: scale(1, 0);
+            transition: ease 400ms;
+            transform-origin: top;
+            left: calc(100vw - 210px);
+            top: 50px;
+            width: 200px;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+            li {
+                background: $accent;
+                padding: 0 20px;
+                width: 100%;
+                justify-content: flex-end;
+                &:hover {
+                    background: $accent-light;
+                }
+                .link {
+                    opacity: 0;
+                    transition: opacity 150ms ease;
+                    &:hover::before {
+                        transform: scale(0, 0);
+                    }
+                }
+            }
+            #logo {
+                display: none;
+                margin: 0;
+            }
+        }
+        .navbar-toggler:checked~.navbar {
+            transform: scale(1, 1);
+        }
+        .navbar-toggler:checked~.navbar a {
+            opacity: 1;
+            transition: opacity 250ms ease 220ms;
+        }
+    }
+    .jumbotron h1 {
+        font-size: 2rem;
+    } // PHOTOAPP QUERIES
+    #photoapp {
+        .inner-text-wrapper {
+            margin: 20px;
+            padding: 50px 0;
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+        .hand-wrapper {
+            img {
+                opacity: 0.4;
+                width: 500px;
+                left: 25%;
+                bottom: -250px;
+            }
+        }
+    } // DESIGN QUERIES
+    #design {
+        .iphone-wrapper {
+            .iphone {
+                z-index: 2;
+                left: 50%;
+                bottom: -1000px;
+            }
+            .smiley {
+                opacity: 0.9;
+                width: 200px;
+                display: block;
+                position: absolute;
+                left: 60%;
+                bottom: -800px;
+                z-index: 3;
+                
+                display: block;
+            }
+        }
+    }
+    #community {
+        .inner-text-wrapper{
+            padding: 50px 0 10px 0;
+        }
+        .owl-wrapper{
+            padding: 0 0 50px;
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    #download {
+        .inner-text-wrapper{
+            padding: 50px 0 50px 0;
+        }
+        .btn-group {
+            margin-bottom: 10px;        }
+        .btn-primary{
+            width: 60px;
+        }
+        .btn-secondary {
+            width: 200px;
+        }
+    }
+    //footer
+    footer {
+        #go-top {
+            right: 10%;
+        }
+    }
+    
+}
+
+@media (max-width: 500px) {
+    #photoapp {
+        .hand-wrapper {
+            img {
+                display: none;
+            }
+        }
+    }
+    #design {
+        .iphone-wrapper {
+            img {
+                display: none;
+            }
+        }
+    }
+}

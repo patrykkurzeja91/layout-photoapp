@@ -8,41 +8,46 @@
     <title>Photo Portfolio</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/owlCarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owlCarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/vendor/magnific-popup.css">
-
-
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="./images/Livello 4@1X.png">
 </head>
 
 <body>
     <!-- Header
    ================================================== -->
-    <header>
-
+    <header id="home">
         <nav id="nav-wrap">
             <div class="container">
-                <div class="navbar" id="nav">
-                    <div class="current">
+                
+                <input class="navbar-toggler" id="navbar-toggler" type="checkbox" />
+                <label for="navbar-toggler" class="navbar-toggler-label"><span></span></label>
+                <ul class="navbar" id="nav">
+                    <li class="current">
                         <a class="link smoothscroll" href="#home">home</a>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <a class="link smoothscroll" href="#photoapp">photoapp</a>
-                    </div>
-                    <div id="logo">
+                    </li>
+                    <li id="logo">
                         <a href="#">
                             <img src="images/Livello 2@1X.png" alt="photo icon">
                         </a>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <a class="link smoothscroll" href="#design">design</a>
-                    </div>
-                    <div>
+                    </li>
+                    <li>
                         <a class="link smoothscroll" href="#download">download</a>
-                    </div>
-                </div>
+                    </li>
+                </ul>
+                
             </div>
         </nav>
         <!-- Jumbotron
@@ -56,12 +61,18 @@
             <div class="container">
                 <h1>Your Life, A photo</h1>
                 <p>print your life in a simple photo</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">Get started</a>
+                <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="popover" data-placement="bottom" data-content="Wait for a falling star. Make a wish.">Get started</a>
             </div>
             <div class="social">
-                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://flickr.com" target="_blank"/><i class="fab fa-flickr"></i></a>
-                <a href="https://dribbble.com/" target="_blank"> <i class="fab fa-dribbble"></i></a>
+                <a href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://flickr.com" target="_blank" />
+                <i class="fab fa-flickr"></i>
+                </a>
+                <a href="https://dribbble.com/" target="_blank">
+                    <i class="fab fa-dribbble"></i>
+                </a>
             </div>
         </div>
     </header>
@@ -72,7 +83,7 @@
         <section id="photoapp">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 inner-text-wrapper">
+                    <div class="col-md-6 col-xs-12 inner-text-wrapper">
                         <h3>Represent your life with a single photo</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -92,7 +103,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 iphone-wrapper">
-                        <img src="images/iphone-5c.png" alt="iPhone 5c">
+                            <img class="smiley" src="images/smiley.png" alt="smile!">
+                        <img class="iphone" src="images/iphone-5c.png" alt="iPhone 5c">
+                        
                     </div>
 
                     <div class="col-md-6 inner-text-wrapper">
@@ -163,7 +176,7 @@
                         <h4>our community</h4>
                         <p>Lorem ipsum dolor sit amet Consectetur, explicabo.</p>
                     </div>
-                    <div class="col-md-8 offset-md-1 inner-text-wrapper">
+                    <div class="col-md-8 offset-md-1 inner-text-wrapper owl-wrapper">
                         <div class="owl-two owl-carousel owl-theme">
                             <div class="item">
                                 <img src="https://images.pexels.com/photos/911/time-watch-hands-of-a-clock-clock-pointers.jpg?h=350&auto=compress&cs=tinysrgb"
@@ -192,59 +205,80 @@
 
         <section id="subscribe">
             <div class="container inner-text-wrapper">
-                <form name="contactForm" id="contactForm" action="" method="post">
+                <form name="contactForm" id="contactForm" action="inc/sendEmail.php" method="post">
                     <h5>Subscribe to our community</h5>
                     <div class="input-group mb-3">
-                        <input id="contactEmail" name="contactEmail" type="email" class="form-control" placeholder="your email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input id="contactEmail" name="contactEmail" type="email" class="form-control" placeholder="your email" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
                         <div class="input-group-append">
-                            <button class="btn btn-primary submit" type="submit" >
+                            <button class="btn btn-primary submit" type="submit">
                                 <i class="fas fa-check"></i>
-                                
+
                             </button>
                         </div>
                     </div>
                 </form>
                 <!-- contact-warning -->
-               <div id="message-warning"><i class="fab fa-times"></i><br></div>
-               <!-- contact-success -->
-				   <div id="message-success">
-                  <i class="fab fa-check"></i>success<br>
-				   </div>
+                <div id="message-warning">
+                    <i class="fab fa-times"></i>
+                    <br>
+                </div>
+                <!-- contact-success -->
+                <div id="message-success">
+                    <i class="fab fa-check"></i>success
+                    <br>
+                </div>
 
             </div>
         </section>
         <section id="download">
             <div class="container">
                 <div class="inner-text-wrapper">
-                <h4>Download it</h4>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex non incidunt animi dignissimos. Inventore cum
-                    aspernatur nemo, rerum vitae quisquam delectus natus reprehenderit aliquid deserunt minima adipisci vero
-                    commodi quaerat ullam est quo ad exercitationem?</p>
+                    <h4>Download it</h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex non incidunt animi dignissimos. Inventore
+                        cum aspernatur nemo, rerum vitae quisquam delectus natus reprehenderit aliquid deserunt minima adipisci
+                        vero commodi quaerat ullam est quo ad exercitationem?</p>
                     <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                    <div class="btn-group mr-4" role="group" aria-label="First group">
+                        <div class="btn-group mr-4" role="group" aria-label="First group">
                             <a role="button" class="btn btn-secondary">App Store</a>
-                            <a role="button" class="btn btn-primary"><i class="fab fa-apple"></i></a>
-                            
-                          </div>
-                          <div class="btn-group mr-2" role="group" aria-label="First group">
-                                <a role="button" class="btn btn-secondary">Play Store</a>
-                                <a role="button" class="btn btn-primary" disabled><i class="fab fa-google-play"></i></a>
-                                
-                              </div>
-                            </div>
+                            <a role="button" class="btn btn-primary">
+                                <i class="fab fa-apple"></i>
+                            </a>
+
+                        </div>
+                        <div class="btn-group mr-4" role="group" aria-label="First group">
+                            <a role="button" class="btn btn-secondary">Play Store</a>
+                            <a role="button" class="btn btn-primary" disabled>
+                                <i class="fab fa-google-play"></i>
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
-                
+
             </div>
         </section>
     </main>
     <footer>
+        <div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#home">
+                <i class="fas fa-angle-up"></i>
+            </a>
+        </div>
+
         <div class="container">
             <div class="row">
                 <div class="col-md-11">
                     <ul class="terms">
-                        <li><a href="#modal-01">credits</a></li>
-                        <li><a href="#modal-02">privacy</a></li>
-                        <li><a href="#modal-03">our terms</a></li>
+                        <li>
+                            <a href="#modal-01">credits</a>
+                        </li>
+                        <li>
+                            <a href="#modal-02">privacy</a>
+                        </li>
+                        <li>
+                            <a href="#modal-03">our terms</a>
+                        </li>
                     </ul>
                     <p>Copyright by photosite - all rights reserved</p>
                 </div>
@@ -255,30 +289,32 @@
         </div>
         <!-- MODAL POPUPS -->
         <div id="modal-01" class="popup-modal mfp-hide">
-                <div class="description-box">
-                    <h4>Credits</h4>
-                    <p>Site prepared by Patryk Kurzeja with HTML5, CSS3, Bootsrap and jQuery <br/>
-                    Added funcionality with Magnific-popups, Owl Carousel 2, Waypoints.
-                    </p>
-                 <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
-                </div>
-  
-              <div class="link-box">
-                   <a class="popup-modal-dismiss">Close</a>
-              </div>
-  
-            </div><!-- modal-01 End -->
+            <div class="description-box">
+                <h4>Credits</h4>
+                <p>Site prepared by Patryk Kurzeja with HTML5, CSS3, Bootsrap and jQuery
+                    <br/> Added funcionality with Magnific-popups, Owl Carousel 2, Waypoints.
+                </p>
+                <span class="categories">
+                    <i class="fa fa-tag"></i>Branding, Webdesign</span>
+            </div>
 
-            <div id="includePrivacy"></div>
-            <!-- modal-02 End -->
-            <div id="includeTerms"></div>
-            <!-- modal-03 End -->
+            <div class="link-box">
+                <a class="popup-modal-dismiss">Close</a>
+            </div>
+
+        </div>
+        <!-- modal-01 End -->
+
+        <div id="includePrivacy"></div>
+        <!-- modal-02 End -->
+        <div id="includeTerms"></div>
+        <!-- modal-03 End -->
     </footer>
     <!--    SCRIPTS   -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.flexslider.js"></script>
