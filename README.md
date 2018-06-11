@@ -1,3 +1,3 @@
 This is simple landing page website.
 
-#Link to the page. Try it out! (https://patraspan.github.io/photo-app/#)
+## Link to Github Pages is [here](https://patraspan.github.io/photo-app/#). Check it out! 
